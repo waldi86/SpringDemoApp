@@ -1,0 +1,30 @@
+security:
+  user:
+    name: user
+    password: pass
+
+#logging:
+#  level:
+#    org.springframework.data.rest: debug
+
+spring:
+  data:
+    rest:
+      base-path: /api
+  datasource:
+    username: user
+    password: pass
+    url: jdbc:h2:./applicationDatabase
+    driver-class-nam: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+      settings.web-allow-others: true
+      path: /H2
+      settings:
+        trace: true
+  port: 55000
+
+logging:
+  level:
+    tacos: WARN
